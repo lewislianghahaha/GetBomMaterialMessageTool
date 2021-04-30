@@ -29,8 +29,8 @@
 
                             INNER JOIN dbo.T_BD_UNIT_L g ON a.FUNITID=g.FUNITID AND g.FLOCALEID <>1033
 
-                            WHERE A.FFORBIDSTATUS='A' --BOM禁用状态:否
-                            AND A.FDOCUMENTSTATUS='C' --BOM审核状态:已审核
+                            WHERE /*A.FFORBIDSTATUS='A' --BOM禁用状态:否
+                            AND*/ A.FDOCUMENTSTATUS='C' --BOM审核状态:已审核
                             AND C.FDOCUMENTSTATUS='C' --物料审核状态:已审核
                             AND C.FFORBIDSTATUS='A'   --物料禁用状态:否
                             AND D.FLOCALEID='2052'
